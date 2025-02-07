@@ -36,7 +36,7 @@ Note que retornou a mesma chave hash.
 > 6f16acbbc80d444145a09d897a93591cd806d3f8
 
 Mas como não existe projeto de um arquivo só ("graças a Deus"), e sim vários arquivos e diretórios. Para ter um registro de todos eles o git se utiliza 
-de uma objeto, conhecido como *tree*.
+de um objeto, conhecido como *tree*.
 
 ![objeto tree](./imagens/data-model-2.png)
 
@@ -66,8 +66,7 @@ Se dermos uma especionada em commit por meio de seu hash, teremos essa saída ("
 >
 > committer Lucas Souza de Aruajo <lucass.a.6991@gmail.com> 1738883695 -0300
 
-E essa estrutura que faz com que o git seje tão seguro, pois qualquer alateração por menor que seja, alterará o hash do *blob*, que por sua vez altera 
-o hash da *tree* e que também alterará o hash do seu *commit*.
+E essa estrutura que faz com que o git seje tão seguro, pois qualquer alateração por menor que seja, alterará o hash do *blob*, que por sua vez altera o hash da *tree* e que também alteraráz o hash do seu *commit*.
 
 ## Como o git monitora
 
