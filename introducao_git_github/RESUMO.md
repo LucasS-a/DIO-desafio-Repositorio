@@ -1,4 +1,6 @@
-# Introdução de Git/Github. 
+# Introdução de Git/Github
+
+## Objetos do git
 
 O curso teve uma ótima abordagem, primeiro nos ensinando como o git trabalha para identificar alterações. Ele se utiliza do código de encriptação SHA1, 
 pois qualquer alteração reflete em uma modificação do código gerado.
@@ -56,7 +58,84 @@ Se dermos uma especionada em commit por meio de seu hash, teremos essa saída ("
 > committer Lucas Souza de Aruajo <lucass.a.6991@gmail.com> 1738883695 -0300
 
 E essa estrutura que deixa faz com que o git seje tão seguro, pois qualquer alateração por menor que seja, alterará o hash do *blob*, que por sua vez altera 
-o hash da *tree* e que também altera o hash do seu *commit*. 
+o hash da *tree* e que também altera o hash do seu *commit*.
 
+## Como o git monitora
+
+![Funcionamento da stage area](./imagens/git_github_fig04.jpg)
+
+### Untracked
+
+São arquivos ou diretórios não rastreados, no qual o git não tem nenhum registro sobre eles, e ao serem adicionados com o comando add, são enviados a "Staging Area".
+
+### Tracked
+
+São arquivos ou diretórios que o git tem registro uma chave hash, para comparar e verificar se houve alguma modificação.
+
+### Unmodified
+
+Todo objeto pertecente ao git tem uma chave hash, ao qual o git verifica para comparar e ver se houve uma modificação, os objetos sem modificação são conhecidos 
+como *Unmodified*.
+
+### Modified
+
+E os que foi constatado uma modificação, são conhecidos como *Modified*.
+
+### Staging Area
+
+Esta é uma área intermediária onde commits podem ser formatados e revisados antes de completar o commit. Ao sofrerem commits os objetos retornam ao estado de
+*Modified*. 
+
+## Comandos
+
+### Git Init
+
+Inicia o repositório git.
+
+### Git Status
+
+Verifica como o git está enchergando os arquivos e diretórios.
+
+> git status
+>
+> On branch main
+>
+> Your branch is up to date with 'origin/main'.
+>
+>
+> Changes not staged for commit:
+>
+>  
+>  (use "git add <file>..." to update what will be committed)
+>
+>  (use "git restore <file>..." to discard changes in working directory)
+>
+>        modified:   introducao_git_github/RESUMO.md
+>
+>
+> Untracked files:
+>
+>   (use "git add <file>..." to include in what will be committed)
+>
+>         introducao_git_github/imagens/git_github_fig04.jpg
+>
+> no changes added to commit (use "git add" and/or "git commit -a")
+
+
+### Git Add
+
+Transfere os objetos *Untracked* e *Unmodified* para a *Staging Area*.
+
+### Git Commit
+
+Grava as alterações feitas no repositório.
+
+### Git Push
+
+Transfere as alterações para o repositório remoto.
+
+### Git Clone
+
+Clona um repositório remoto na sua máquina.
 
 
